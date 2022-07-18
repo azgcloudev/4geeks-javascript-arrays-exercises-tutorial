@@ -2,5 +2,17 @@ let par = "Lorem ipsum dolor sit amet consectetur adipiscing elit Curabitur eget
 let counts = {};
 
 // your code here
+let parArr = par.split('');
+
+for (let element of parArr) {
+    element = element.toLowerCase();
+    if (counts[element] === undefined && element !== " ") {
+        counts[element] = 1;
+    } else if (counts[element] !== undefined && element !== " ") {
+        counts[element] += 1;
+    } else {
+        continue;
+    }
+}
 
 console.log(counts);
